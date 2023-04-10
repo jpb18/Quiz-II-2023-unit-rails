@@ -27,14 +27,6 @@ The app is built to match the following Entity Relationship Diagram:
 
   * Make sure you have [PostgreSQL](https://www.postgresql.org/) installed and running.
 
-### Setup
-
-  * Clone this repository by running `git clone https://github.com/Kingjosh007/rails-blog-app` in your command line.
-
-  * Navigate to the repository by running `cd rails-blog-app`.
-
-  * Run `bundle install` to install all the gems.
-
 ### Running the app
 
   *  Run rake `db:create:all` and `rake db:migrate`
