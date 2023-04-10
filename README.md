@@ -1,4 +1,5 @@
 # Rails Blog App - QUIZ 2 - Rails Unit
+## 10 abril a 20 de Abril
 
 > A fully functional blog app written in Ruby on Rails as a learning exercise.
 
