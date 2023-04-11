@@ -3,7 +3,10 @@
 
 > A fully functional blog app written in Ruby on Rails as a learning exercise.
 
-## About 
+## Goal
+It is assumed that a client has given us a project and asked us to evaluate it in terms of safety
+
+The objective is to run the project and discover any security flaws and fix them.
 
 ### Features
 
