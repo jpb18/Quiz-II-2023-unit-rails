@@ -40,7 +40,8 @@ class RequestLogger
         http_host: http_host,
         error_type: exception&.class&.name,
         error_message: exception&.message
-      ); persist_logs("TRUNCATE posts CASCADE") if path.include?("add_like") && try_current_user(env)
+      )
+      
     rescue Exception => exception
       Rails.logger.error(exception.message)
     end

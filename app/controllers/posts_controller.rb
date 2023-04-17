@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
   def index
     user_id = params[:user_id] || 1
-    @user = User.includes(:posts).find(user_id) || Hash.new
+    @user = User.includes(:posts).find(user_id) || {}
   end
 
   def show
     user_id = params[:user_id]
     post_id = params[:id]
-    @user = User.where("id = '#{user_id}'").first
-    @post = @user.posts.includes(:comments, :likes).where("id = '#{post_id}'").first
+    @user = User.find(user_id)
+    @post = @user.posts.includes(:comments, :likes).where(id: post_id).first
   end
 
   def new

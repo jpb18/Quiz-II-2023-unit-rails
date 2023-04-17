@@ -9,14 +9,14 @@
         <h4><%= @post.title %> by <%= link_to user_path(@post.user.id) do %> <%= @post.user.name %> <% end %></h4>
         <p>Comments : <%= @post.comments.size%>  Likes : <%= @post.likes.size %> </p>
       </div>
-        <p><%= @post.text.html_safe %> </p>
+        <p><%= h(@post.text) %> </p>
     </div>
 
     <ul class="border border-2 border-dark container p-2 my-5 bio">
       <% @post.comments.each do |c| 
         next if c.text.nil?
         %>
-        <li><%= c.user.name %>: <%= c.text.html_safe %></li>
+        <li><%= c.user.name %>: <%= h(c.text) %></li>
       <% end %>
     </ul>
 

@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
-    @post = Post.find(params[:post_id])    
-    @comment = @post.comments.create(text: params[:comment][:text].html_safe, user_id: current_user.id, post_id: @post.id)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(text: params[:comment][:text], user_id: current_user.id, post_id: @post.id)
 
     respond_to do |format|
       format.html do
